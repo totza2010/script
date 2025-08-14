@@ -93,7 +93,7 @@ reset_fingerprint() {
 
   safe_write_uuid_into_config "$NEW_UUID"
 
-  qm set "$VMID" --net0 virtio="$NEW_MAC",bridge="$BRIDGE"
+  qm set "$VMID" --net0 e1000="$NEW_MAC",bridge="$BRIDGE"
   success "MAC Address ใหม่: $NEW_MAC"
 
   qm set "$VMID" --$DISK_ENTRY ${STORAGE_NAME}:vm-$VMID-disk-0,serial=$NEW_DISK_SERIAL
