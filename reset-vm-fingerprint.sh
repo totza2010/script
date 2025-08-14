@@ -3,7 +3,7 @@
 # === CONFIG ===
 VMID=""
 STORAGE_NAME="local-lvm"
-DISK_ENTRY="scsi0"
+DISK_ENTRY="ide0"
 BRIDGE="vmbr0"
 TIMEOUT=60
 # ==============
