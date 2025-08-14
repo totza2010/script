@@ -25,8 +25,7 @@ check_vm_exists() {
 }
 
 shutdown_vm_if_running() {
-  local status
-  status=$(qm status "$VMID" | awk '{print $2}')
+  local status=$(qm status "$VMID" | awk '{print $2}')
   if [[ "$status" == "running" ]]; then
     print_header "VM กำลังเปิดอยู่"
     read -p "❓ ต้องการปิด VM นี้ก่อนทำงานต่อหรือไม่? [y/N] " confirm
